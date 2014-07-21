@@ -1,7 +1,8 @@
-## Put comments here that give an overall description of what your
-## functions do
+## These functions find and cache the Inverse of a Matrix
+## using the superassignment operator
 
-## Write a short comment describing this function
+## This function, makeCacheMatrix, prepares a list of functions  
+## to set and get the matrix and its inverse
 
 makeCacheMatrix <- function(x = matrix()) {
         m <- NULL
@@ -18,7 +19,11 @@ makeCacheMatrix <- function(x = matrix()) {
 }
 
 
-## Write a short comment describing this function
+## This function uses the set and get functions prepared by
+## makeCacheMatrix in order to solve for the inverse of a matrix
+## only if the matrix has changed and a new inverse must be
+## calculated. It the matrix has not changed the function simply
+## caches the stored value of the inverse
 
 cacheSolve <- function(x, ...) {
         m <- x$getInv()
